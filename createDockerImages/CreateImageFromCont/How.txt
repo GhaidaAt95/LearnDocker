@@ -1,0 +1,15 @@
+########## First Terminal 
+
+docker run -it alpine sh
+    / # apk add --update redis 
+
+
+
+#take a snapchot of the running container and assign a default 
+#   command to it and generate an image of the entire thing
+########## Second Terminal  
+docker ps 
+
+docker commit -c 'CMD ["redis-server]' <ID> 
+
+# The output is the ID of the new image just cusomized 
