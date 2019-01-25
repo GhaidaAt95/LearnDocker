@@ -6,7 +6,10 @@ services:
   redis-server:
     image: 'redis' 
   node-app:
+    restart: unless-stopped
     build: .
     ports:
       - "8081:8081" 
-#services =  essentiall but not quitly a container more like a type f a container
+ #services =  essentiall but not quitly a container more like a type f a container
+
+ # Restart Policies: "no" , always, on-failure, unless-stopped 
