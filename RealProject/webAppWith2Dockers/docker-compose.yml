@@ -1,0 +1,12 @@
+# Specify the docker compose version
+version : '3'
+
+# Here is what we want you to do :
+services: 
+  redis-server:
+    image: 'redis' 
+  node-app:
+    build: .
+    ports:
+      - "8081:8081" 
+#services =  essentiall but not quitly a container more like a type f a container
